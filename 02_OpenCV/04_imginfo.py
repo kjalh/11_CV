@@ -46,8 +46,9 @@ height, width = img_color.shape[:2]
 img_color[:,:] = (255, 102, 255)
 
 
+# 이거 하라는 게 아녔음
 pink = np.full((364,548, 3), (255, 102, 255), dtype=np.uint8)
-img5 = cv2.addWeighted(img_color, 0.6, pink, 0.4, 0)
+img5 = cv2.addWeighted(img_original, 0.6, pink, 0.4, 0)
 
 cv2.imshow('original', img_original)
 cv2.imshow('zeros', img1)
