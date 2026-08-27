@@ -20,7 +20,8 @@ if img_color.ndim == 3:
 elif img_color.ndim == 2:
     print('img_color는 그레이스케일 이미지입니다.')
 
-print(img_color.ndim) # 출력: 2
+# print(img_color.ndim)
+# print(img_gray.ndim)
 
 img1 = np.zeros((240, 320, 3), dtype=np.uint8) # 가로 320, 세로 240, 컬러(검은색)
 
