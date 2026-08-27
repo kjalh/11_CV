@@ -62,6 +62,7 @@ cv2.imshow('original + pink', img5)
 
 while True:
     key = cv2.waitKey(0)
+    # i 누르면 반전됨
     if key in (ord("i"), ord("I")):
         # uint8 이미지에서 ~(반전)은 각 픽셀에 대해 255 -(마이너스) 값과 같은 결과를 만듦
         img_original = ~img_original
