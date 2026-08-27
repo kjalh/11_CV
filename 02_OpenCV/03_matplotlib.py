@@ -17,7 +17,7 @@ plt.axis("off")
 plt.title("Grayscale")
 plt.imshow(img_gray, cmap = "gray")
 
-plt.subplot(1, 2, 2)
+plt.subplot(1, 2, 2)    # 전체 캔버스(Figure)를 1행 2열의 격자로 나누고, 그중 2번째(오른쪽) 칸
 plt.axis("off") # 격자 없앰
 plt.title("Color")
 plt.imshow(img_color_rgb)
