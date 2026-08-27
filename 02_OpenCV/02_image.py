@@ -29,5 +29,5 @@ print(img_color)
 
 cv2.imshow('gray', img_gray)
 cv2.imshow('color', img_color)
-cv2.waitKey(0)
+cv2.waitKey(0)  # 1000을 넣으면 1초
 cv2.destroyAllWindows() # 창 끌 때 메모리 잡아둔 것도 할당 해제함

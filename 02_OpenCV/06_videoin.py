@@ -18,3 +18,21 @@ print('너비: ', width)
 print('높이: ', height)
 print('프레임 수: ', frame_count)
 print('FPS: ', fps)
+
+
+delay = max(1, round(1000/fps)) if fps > 0 else 40
+
+while True:
+    # ret: 프레임을 정상적으로 읽었는지 여부
+    # frame: 읽어온 한 장의 영상 프레임(numpy 배열)
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    cv2.imshow("frame", frame)
+
+    if cv2.waitKey(delay) == 27:  # 동영상 속도 만큼 돈다
+        break
+
+cap.release()
+cv2.destroyAllWindows()
