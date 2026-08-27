@@ -1,6 +1,12 @@
 import cv2
 import numpy as np
 
+
+oldx = 0
+oldy = 0
+
+
+
 def on_mouse(event, x, y, flags, param):
     """
     event: 발생한 마우스 이벤트 종류 객체
@@ -8,8 +14,21 @@ def on_mouse(event, x, y, flags, param):
     flags: 마우스 버튼/키 상태  -> 마우스 클릭 했는지 안 했는지
     param: setMouseCallback()에서 전달할 추가 데이터  <- 이 함수 때문에 on_mouse에 파라미터가 똑같이 들어가야 됨
     """
+
+    global oldx, oldy
+
     if event == cv2.EVENT_LBUTTONDOWN:
+        oldx, oldy = x, y
         print(f"왼쪽 버튼 DOWN: ({x}, {y})")
+    elif event == cv2.EVENT_LBUTTONUP:
+        print(f"왼쪽 버튼 UP: ({x}, {y})")
+    elif event == cv2.EVENT_MOUSEMOVE:
+        if flags & cv2.EVENT_FLAG_LBUTTON:
+            print(f"드래그 중: ({x}, {y})")
+            cv2.line(img, (oldx, oldy), (x, y), (255, 51, 255), 3)
+            oldx, oldy = x, y
+            cv2.imshow("canvas", img)
+
     
 
 img = np.full((500, 500,3), 255, dtype=np.uint8)
