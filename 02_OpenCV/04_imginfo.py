@@ -30,9 +30,14 @@ img2 = np.empty((240, 320), dtype=np.uint8)
 
 # full 특정 원소값으로 채워짐 여기서 120으로 설정함
 img3 = np.full((240,320), 120, dtype=np.uint8)
+
+img4 = np.full((240,320, 3), (255, 102, 255), dtype=np.uint8)
+
 cv2.imshow('zeros', img1)
 cv2.imshow('empty', img2)
 cv2.imshow('full_120', img3)  
+cv2.imshow('full_(255,102255)_color', img4)  
+cv2.imshow('original', img_color)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
