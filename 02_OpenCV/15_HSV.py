@@ -39,9 +39,11 @@ upper_blue = (150, 255, 255)
 # 범위 안에 있는 픽셀은 255(흰색), 범위 밖에 픽셀은 0(검정)인 마스크를 만듦
 blue_mask = cv2.inRange(hsv, lower_blue, upper_blue)
 
-
+# 마스크를 airplane에 뽑기만 함
 airplane_only = cv2.copyTo(airplane, mask)
 composite = field.copy()
+
+# mask로 airplane을 뽑아서 composite랑 합침
 cv2.copyTo(airplane, mask, composite)
 
 
