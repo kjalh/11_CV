@@ -16,6 +16,12 @@ YCrCb
 
 """
 ycrcb = cv2.cvtColor(img_color, cv2.COLOR_BGR2YCrCb)
+ycrcb[:,:,0] = cv2.equalizeHist(ycrcb[:,:,0])
+equalized_color = cv2.cvtColor(ycrcb, cv2.COLOR_YCrCb2BGR)
+
+cv2.imshow("color equalize", equalized_color)
+
+
 
 """
 normalize()
