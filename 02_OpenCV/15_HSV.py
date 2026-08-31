@@ -33,6 +33,7 @@ hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
 # 파란색에 해당하는 HSV 범위를 지정
 # 실제 영상에서는 조명과 카메라에 따라 범위를 적절하게 조정
+#              H   S   V
 lower_blue = (90, 150, 0)
 upper_blue = (150, 255, 255)
 
