@@ -34,6 +34,10 @@ Otsu 자동 임계값
 THRESH_OTSU를 사용하면 임계값을 사람이 직접 정하지 않고 영상의 히스토그램을 이용해 OpenCV가 임계값을 자동으로 선택
 """
 
+otsu_threshold, dst_otsu = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+print("임계값 otsu: ", otsu_threshold)
+cv2.imshow("threshold otsu", dst_otsu)
+
 plt.plot(hist)
 plt.title("Grayscale Histogram")
 plt.xlabel("Pixel Value")
