@@ -1,3 +1,5 @@
 .venv/
 data/Custom_YOLO/
-data/VOCdevkit/
+data/VOCdevkit/VOC2007
+data/VOC2007/
+data/000001.text
