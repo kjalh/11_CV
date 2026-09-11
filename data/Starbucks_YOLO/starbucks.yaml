@@ -1,0 +1,7 @@
+path: C:\heeseung\11_CV\data\Starbucks_YOLO
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: logo
+  1: text
